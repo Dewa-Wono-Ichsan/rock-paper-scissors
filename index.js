@@ -86,24 +86,16 @@
         }
     }
 
-    console.log(singleRound("scissors", "Rock!"));
-    console.log(singleRound("paper", "Scissors!"));
-    console.log(singleRound("rock", "Scissors!"));
-    console.log(singleRound("RocK", "Scissors!"));
-    console.log(singleRound("RoCK", "Scissors!"));
-    console.log(singleRound("paper", "Rock!"));
-    console.log(singleRound("PAPER", "Rock!"));
-    console.log(singleRound("PAper", "Rock!"));
-    console.log(singleRound("scissors", "Paper!"));
-    console.log(singleRound("SCISSORS", "Paper!"));
-    console.log(singleRound("sss", "Paper!"));
-    console.log(singleRound("scissors", "Scissors!"));
-    console.log(singleRound("SCISSORS", "Scissors!"));
-    console.log(singleRound("rock", "Rock!"));
-    console.log(singleRound("paper", "Paper!"));
-    console.log(singleRound("rock", "Paper!"));
-    console.log(singleRound("rrr","Rock!")); 
-    console.log(singleRound("qqq", "Scissors!"));
-
 // Make battle of rock, paper, scissors between player and computer
+    //play 5 time of the game
+    // each round getting score for win, draw,or lose
+function playGame() {
+    return singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice());
+}
+
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
 // Print output of the result in console browser
