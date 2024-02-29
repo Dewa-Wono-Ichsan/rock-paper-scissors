@@ -26,33 +26,41 @@
 
 // Make condition of win, draw, and lose the game
     function singleRound(playerSelection, ComputerSelection) {
-        if ( 
-            (playerSelection === "rock" || "Rock" || "ROCK") 
-            && ComputerSelection === "Scissors!") {
-                return "You win! Rock defeat scissors"; //win condition
-        } else if ( 
-            (playerSelection === "paper" || "Paper" || "PAPER") 
-            && ComputerSelection === "Rock!") {
-                return "You win! Paper defeat rock"; //win condition
-        } else if ( 
-            (playerSelection === "scissors" || "Scissors" || "SCISSORS")
-            && ComputerSelection === "Paper!") {
-                return "You win! Scissors defeat paper"; //win condition
-        } else if (
-            (playerSelection === "rock" || "Rock" || "ROCK")
-            && ComputerSelection === "Rock!"
-        ) {
-                return "You draw! Battle between rock power"
+        if (playerSelection === "rock" && ComputerSelection === "Scissors!"
+            || playerSelection === "Rock" && ComputerSelection === "Scissors!"
+            || playerSelection === "ROCK" && ComputerSelection === "Scissors!"
+            || playerSelection === "RocK" && ComputerSelection === "Scissors!"
+            || playerSelection === "RoCK" && ComputerSelection === "Scissors!") {
+            return "You Win! Rock defeat scissors"
+        } else if (playerSelection === "paper" && ComputerSelection === "Rock!"
+        || playerSelection === "Paper" && ComputerSelection === "Rock!"
+        || playerSelection === "PAPER" && ComputerSelection === "Rock!"
+        || playerSelection === "PapeR" && ComputerSelection === "Rock!"
+        || playerSelection === "PAper" && ComputerSelection === "Rock!") {
+        return "You Win! Paper defeat rock"
+        } else if (playerSelection === "scissors" && ComputerSelection === "Paper!"
+        || playerSelection === "Scissors" && ComputerSelection === "Paper!"
+        || playerSelection === "SCISSORS" && ComputerSelection === "Paper!"
+        || playerSelection === "ScissorS" && ComputerSelection === "Paper!"
+        || playerSelection === "sCISSORs" && ComputerSelection === "Paper!") {
+        return "You Win! Scissors defeat paper"
         }
         else {
-            return "please choose between rock, paper, or scissors"
+            return "try something else"
         }
     }
+
+    console.log(singleRound("rock", "Scissors!"));
+    console.log(singleRound("RocK", "Scissors!"));
+    console.log(singleRound("RoCK", "Scissors!"));
+    console.log(singleRound("paper", "Rock!"));
+    console.log(singleRound("PAPER", "Rock!"));
+    console.log(singleRound("PAper", "Rock!"));
     console.log(singleRound("scissors", "Paper!"));
-    console.log(singleRound("rock", "Rock!")); //wrong result
-    console.log(singleRound("sss", "Paper!")); //wrong result
-    console.log(singleRound("rrr","Rock!")); //wrong result
-    console.log(singleRound("qqq", "Scissors!"));//wrong result
+    console.log(singleRound("SCISSORS", "Paper!"));
+    console.log(singleRound("sss", "Paper!"));
+    console.log(singleRound("rrr","Rock!")); 
+    console.log(singleRound("qqq", "Scissors!"));
 
 // Make battle of rock, paper, scissors between player and computer
 // Print output of the result in console browser
