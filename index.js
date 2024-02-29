@@ -23,7 +23,27 @@
         }
     }
 
-console.log(getComputerChoice());
+
 // Make condition of win, draw, and lose the game
+    function singleRound(playerSelection, ComputerSelection) {
+        if ( 
+            (playerSelection === "rock" || "Rock" || "ROCK") 
+            && ComputerSelection === "Scissors!") {
+                return "You win! Rock defeat scissors";
+        } else if ( 
+            (playerSelection === "paper" || "Paper" || "PAPER") 
+            && ComputerSelection === "Rock!") {
+                return "You win! Paper defeat scissors";
+        } else if ( 
+            (playerSelection === "scissors" || "Scissors" || "SCISSORS")
+            && ComputerSelection === "Paper!") {
+                return "You win! Scissors defeat paper"
+        }
+        else {
+            return "please choose between rock, paper, or scissors"
+        }
+    }
+    console.log(singleRound("scissors", "Paper!"));
+
 // Make battle of rock, paper, scissors between player and computer
 // Print output of the result in console browser
