@@ -88,7 +88,8 @@
 
 // Make battle of rock, paper, scissors between player and computer
     //play 5 time of the game
-    // each round getting score for win, draw,or lose
+        // each round getting score for win, draw,or lose
+    //Make decision for player in win, draw, or lose rock, paper, scissors
 function playGame() {
     return singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice());
 }
