@@ -82,7 +82,7 @@
         || playerSelection === "SCISSORS" && ComputerSelection === "Rock!"
         || playerSelection === "SCIssors" && ComputerSelection === "Rock!"
         || playerSelection === "sciSSORS" && ComputerSelection === "Rock!") {
-        return singleRoundResult ="You lose! Scissors must be faced with its greatest fear" && --singleRoundPoint //three lose condition
+        return singleRoundResult = "You lose! Scissors must be faced with its greatest fear" && --singleRoundPoint //three lose condition
         }
         else {
             return singleRoundResult = "try something else" && --singleRoundPoint
@@ -95,11 +95,28 @@
         // display result of every round
     //Make decision for player in win, draw, or lose rock, paper, scissors
 function playGame() {
-    return singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 1
+    let totalPoint;
+
+    totalPoint = 
+    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 1
     singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 2
     singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 3
     singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 4
     singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()); //repeat 5
+    
+    if (
+        totalPoint > 0
+    ) {
+        return "You win rock, paper, scissors"
+    } else if(
+        totalPoint < 0
+    ) {
+        return "You lose rock, paper, scissors"
+    } else if(
+        totalPoint === 0
+    ) {
+        return "You draw the game!"
+    }
 }
 
 console.log(playGame());
