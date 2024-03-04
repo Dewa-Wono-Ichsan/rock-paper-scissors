@@ -96,27 +96,21 @@
     //Make decision for player in win, draw, or lose rock, paper, scissors
 function playGame() {
     let totalPoint;
-
-    totalPoint = 
-    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 1
-    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 2
-    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 3
-    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()) + //repeat 4
-    singleRound(prompt("Decide your choice between rock, paper, and scissors"), getComputerChoice()); //repeat 5
+    totalPoint = [singleRound(prompt("choose rock, paper, or scissor") ,getComputerChoice()),
+    singleRound(prompt("choose rock, paper, or scissor") ,getComputerChoice()),
+    singleRound(prompt("choose rock, paper, or scissor") ,getComputerChoice()),
+    singleRound(prompt("choose rock, paper, or scissor") ,getComputerChoice()),
+    singleRound(prompt("choose rock, paper, or scissor") ,getComputerChoice())]
     
-    if (
-        totalPoint > 0
-    ) {
-        return "You win rock, paper, scissors"
-    } else if(
-        totalPoint < 0
-    ) {
-        return "You lose rock, paper, scissors"
-    } else if(
-        totalPoint === 0
-    ) {
-        return "You draw the game!"
-    }
+    let resultGame = [totalPoint, totalPoint[0] + totalPoint[1] + totalPoint[2] + totalPoint[3] + totalPoint [4]]
+if (Number(resultGame[1]) > 0) {
+    return [resultGame, "You win!"]
+} else if (Number(resultGame[1]) < 0) {
+    return [resultGame, "Computer win!"]
+} else if (Number(resultGame[1]) === 0) {
+    return [resultGame, "You and Computer draw!"]
+}
+    
 }
 
 console.log(playGame());
