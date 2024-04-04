@@ -15,3 +15,15 @@
 
 
 
+const rock = document.querySelector('#rock')
+const paper = document.querySelector('#paper')
+const scissors = document.querySelector('#scissors')
+
+rock.addEventListener('click', () => {
+console.log('rock')})
+
+paper.addEventListener('click', () => { 
+console.log('paper')})
+
+scissors.addEventListener('click', () => { 
+console.log('scissors')})
