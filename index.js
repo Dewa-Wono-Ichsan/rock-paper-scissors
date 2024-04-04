@@ -22,19 +22,39 @@ const scissors = document.querySelector('#scissors')
 let score = 0
 
 rock.addEventListener('click', () => {
-    let playerSelection
-    let computerSelection
-    console.log(playerSelection = 'rock')
-    console.log(computerSelection = getComputerChoice())
-    if (playerSelection === 'rock' && computerSelection === 'Rock!') {
-    console.log(score++)
+    let playerSelection = 'rock'
+    let computerSelection = getComputerChoice()
+
+        if (score !== 5 && score !== -5) {
+
+            console.log(
+                `user choose ${playerSelection} and
+                computer choose ${computerSelection}`
+            )
+
+            if (playerSelection === 'rock' 
+            && computerSelection === 'Rock!') {
+            console.log(score++)
+              }
+            else if (playerSelection === 'rock' 
+            && computerSelection === 'Paper!') {
+            console.log(score--)
+                }
+            else {
+            console.log(score)
+                }
+        } else if (score === 5) {
+            console.log('user win')
+            rock.remove()
+            paper.remove()
+            scissors.remove()
+        } else {
+            console.log('computer win')
+            rock.remove()
+            paper.remove()
+            scissors.remove()
         }
-    else if (playerSelection === 'rock' && computerSelection === 'Paper!') {
-    console.log(score--)
-        }
-    else {
-    console.log(score)
-        }
+
     }
 )
 
