@@ -125,6 +125,52 @@ paper.addEventListener('click', () => {
 )
 
 scissors.addEventListener('click', () => { 
+    let playerSelection = 'scissors'
+    let computerSelection = getComputerChoice()
+    const result = document.createElement('div')
 
+        if (score !== 5 && score !== -5) {
+            const div = document.createElement('div')
+            document.body.appendChild(div)
+            div.classList.toggle('player-choice')
+            div.textContent = 
+            `user choose ${playerSelection} and computer choose ${computerSelection}`
+            
+            const point = document.createElement('div')
+            document.body.appendChild(point)
+            point.classList.toggle('point')
+
+
+            if (playerSelection === 'scissors'
+                && computerSelection === 'Paper!') {
+                
+                point.textContent = score++
+              }
+            else if (playerSelection === 'scissors' 
+                && computerSelection === 'Rock!') {
+                
+
+                point.textContent = score--
+                }
+            else {
+                point.textContent = score
+                }
+        } else if (score === 5) {
+            
+            document.body.appendChild(result)
+            result.classList.toggle('result')
+            result.textContent =  'user win'
+            rock.remove()
+            paper.remove()
+            scissors.remove()
+        } else {
+            
+            document.body.appendChild(result)
+            result.classList.toggle('result')
+            result.textContent = 'computer win'
+            rock.remove()
+            paper.remove()
+            scissors.remove()
+        }
     }
 )
