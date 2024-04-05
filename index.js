@@ -33,7 +33,7 @@ rock.addEventListener('click', () => {
             )
 
             if (playerSelection === 'rock' 
-            && computerSelection === 'Rock!') {
+            && computerSelection === 'Scissors!') {
             console.log(score++)
               }
             else if (playerSelection === 'rock' 
