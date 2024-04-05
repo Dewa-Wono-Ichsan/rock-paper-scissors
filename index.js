@@ -24,32 +24,47 @@ let score = 0
 rock.addEventListener('click', () => {
     let playerSelection = 'rock'
     let computerSelection = getComputerChoice()
-
+    const result = document.createElement('div')
+    
         if (score !== 5 && score !== -5) {
+            const div = document.createElement('div')
+            document.body.appendChild(div)
+            div.classList.toggle('player-choice')
+            div.textContent = 
+            `user choose ${playerSelection} and computer choose ${computerSelection}`
+            
+            const point = document.createElement('div')
+            document.body.appendChild(point)
+            point.classList.toggle('point')
 
-            console.log(
-                `user choose ${playerSelection} and
-                computer choose ${computerSelection}`
-            )
 
-            if (playerSelection === 'rock' 
-            && computerSelection === 'Scissors!') {
-            console.log(score++)
+            if (playerSelection === 'rock'
+                && computerSelection === 'Scissors!') {
+                
+                point.textContent = score++
               }
             else if (playerSelection === 'rock' 
-            && computerSelection === 'Paper!') {
-            console.log(score--)
+                && computerSelection === 'Paper!') {
+                
+
+                point.textContent = score--
                 }
             else {
-            console.log(score)
+                point.textContent = score
                 }
         } else if (score === 5) {
-            console.log('user win')
+            
+            document.body.appendChild(result)
+            result.classList.toggle('result')
+            result.textContent =  'user win'
             rock.remove()
             paper.remove()
             scissors.remove()
         } else {
-            console.log('computer win')
+            
+            document.body.appendChild(result)
+            result.classList.toggle('result')
+            result.textContent = 'computer win'
             rock.remove()
             paper.remove()
             scissors.remove()
